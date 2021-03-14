@@ -4,10 +4,12 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.joaoibarra.broker.data.db.property.Property
 import com.joaoibarra.broker.data.db.property.PropertyDao
 
 @Database(entities = [Property::class], version = AppDatabase.DB_VERSION, exportSchema = false)
+@TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun getPropertyDao(): PropertyDao
 
