@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity
 data class Property(
     @PrimaryKey(autoGenerate = false) val id: Int?,
-    @ColumnInfo(name = "type") val type: String?,
+    @ColumnInfo(name = "type") val type: PropertyType?,
     @ColumnInfo(name = "askingPrice") val askingPrice: String?,
     @ColumnInfo(name = "monthlyFee") val monthlyFee: String?,
     @ColumnInfo(name = "municipality") val municipality: String?,
@@ -16,7 +16,9 @@ data class Property(
     @ColumnInfo(name = "livingArea") val livingArea: Float?,
     @ColumnInfo(name = "numberOfRooms") val numberOfRooms: Int?,
     @ColumnInfo(name = "streetAddress") val streetAddress: String?,
-    @ColumnInfo(name = "image") val image: String?
+    @ColumnInfo(name = "image") val image: String?,
+    @ColumnInfo(name = "rating") val rating: String?,
+    @ColumnInfo(name = "averagePrice") val averagePrice: String?
 ) {
 
     override fun equals(other: Any?): Boolean {
