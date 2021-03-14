@@ -1,5 +1,6 @@
 package com.joaoibarra.broker.di
 
+import com.joaoibarra.broker.data.db.property.PropertyRepository
 import com.joaoibarra.broker.data.remote.BrokerApi
 import com.joaoibarra.broker.data.remote.BrokerOkHttpClient
 import com.joaoibarra.broker.data.remote.BrokerRetrofit
@@ -10,4 +11,6 @@ val NetworkModule = module {
     single { BrokerApi.newInstance(get()) }
     single { BrokerRetrofit.newInstance(get()) }
     single { BrokerOkHttpClient.newInstance(androidContext())}
+
+    single { PropertyRepository(get(), get()) }
 }
