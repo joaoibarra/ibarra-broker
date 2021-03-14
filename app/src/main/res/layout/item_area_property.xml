@@ -84,6 +84,7 @@
                 tools:text="50 300 kr/m²" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </com.google.android.material.card.MaterialCardView>
 
 </layout>
