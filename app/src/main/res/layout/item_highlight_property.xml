@@ -27,8 +27,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground">
+            android:layout_height="wrap_content">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/ivImage"
@@ -40,38 +39,32 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextAppearance.Broke.Headline1"
                 android:id="@+id/tvStreetAddress"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:textSize="@dimen/large_text_size"
                 android:text="@{property.streetAddress}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivImage"
                 tools:text="Rua Londrina, 201" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextAppearance.Broke.Body1"
                 android:id="@+id/tvMunicipality"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:textSize="@dimen/medium_text_size"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvStreetAddress"
                 android:text="@{property.area}"
                 tools:text="open" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextAppearance.Broke.Body2"
                 android:id="@+id/tvAskingPrice"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:textSize="@dimen/medium_text_size"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvMunicipality"
