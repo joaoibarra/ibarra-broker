@@ -84,6 +84,7 @@
                 tools:text="5 609 000 kr" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </com.google.android.material.card.MaterialCardView>
 
 </layout>
