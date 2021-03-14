@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Broker</string>
+
+    <string name="property_location">%1$s, %2$s</string>
+    <string name="property_info">%1$s m², %2$s rooms</string>
+    <string name="highlight_title">Trending</string>
 </resources>
