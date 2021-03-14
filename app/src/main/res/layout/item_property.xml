@@ -29,35 +29,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/small_space"
-                android:layout_marginTop="@dimen/small_space"
-                app:cardBackgroundColor="@color/yellow_a400"
-                app:cardUseCompatPadding="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/tvHighlightLabel"
-                        style="@style/TextAppearance.Broke.Highlight.Label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/highlight_title"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/ivImage"
                 android:layout_width="match_parent"
@@ -113,7 +84,6 @@
                 tools:text="5 609 000 kr" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </com.google.android.material.card.MaterialCardView>
 
 </layout>
