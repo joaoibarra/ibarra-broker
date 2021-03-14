@@ -39,7 +39,7 @@ object PropertyMock {
 
     val areaProperty = mockk<Property> {
         every { type } returns PropertyType.Area
-        every { id } returns 28
+        every { id } returns 29
         every { streetAddress } returns null
         every { municipality } returns null
         every { area } returns "Rio de Janeiro"

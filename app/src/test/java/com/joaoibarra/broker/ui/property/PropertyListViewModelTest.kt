@@ -56,7 +56,7 @@ class PropertyListViewModelTest {
     }
 
     @Test
-    fun `when getRestaurants is called with valid list, then observer is updated with success`() =
+    fun `when getProperties is called with valid list, then observer is updated with success`() =
         runBlocking {
             propertyRepository = mockk {
                 coEvery { getProperties() } returns flow { emit(PropertyMock.properties) }
@@ -64,11 +64,11 @@ class PropertyListViewModelTest {
             propertyListViewModel = PropertyListViewModel(propertyRepository)
             propertyListViewModel.properties.observeForever(propertyObserver)
             coVerify { propertyRepository.getProperties() }
-            verify { propertyObserver.onChanged(PropertyMock.properties) }
+            coVerify { propertyObserver.onChanged(PropertyMock.properties) }
         }
 
     @Test
-    fun `when getRestaurants is called with valid list, then observer is updated with empty list`() =
+    fun `when getProperties is called with valid list, then observer is updated with empty list`() =
         runBlocking {
             propertyRepository = mockk {
                 coEvery { getProperties() } returns flow { emit(emptyList<Property>()) }
@@ -76,6 +76,6 @@ class PropertyListViewModelTest {
             propertyListViewModel = PropertyListViewModel(propertyRepository)
             propertyListViewModel.properties.observeForever(propertyObserver)
             coVerify { propertyRepository.getProperties() }
-            verify { propertyObserver.onChanged(emptyList()) }
+            coVerify { propertyObserver.onChanged(emptyList()) }
         }
 }
