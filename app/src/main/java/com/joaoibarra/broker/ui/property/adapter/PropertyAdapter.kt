@@ -9,6 +9,7 @@ import com.joaoibarra.broker.data.db.property.Property
 import com.joaoibarra.broker.data.db.property.PropertyType
 import com.joaoibarra.broker.databinding.ItemAreaPropertyBinding
 import com.joaoibarra.broker.databinding.ItemHighlightPropertyBinding
+import com.joaoibarra.broker.databinding.ItemPropertyBinding
 import com.joaoibarra.broker.ui.property.PropertyListViewModel
 
 class PropertyAdapter (
@@ -32,8 +33,8 @@ class PropertyAdapter (
                 )
             }
             PropertyType.Property -> {
-                HighlightedPropertyViewHolder(
-                        ItemHighlightPropertyBinding.inflate(
+                PropertyViewHolder(
+                        ItemPropertyBinding.inflate(
                                 LayoutInflater.from(parent.context), parent, false
                         ).also {
                             it.vm = propertyListViewModel
@@ -56,6 +57,9 @@ class PropertyAdapter (
         mDiffer.currentList[position].let {
             when(holder) {
                 is HighlightedPropertyViewHolder -> {
+                    holder.bind(it)
+                }
+                is PropertyViewHolder -> {
                     holder.bind(it)
                 }
                 is AreaPropertyViewHolder -> {
