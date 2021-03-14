@@ -22,7 +22,7 @@ class PropertyAdapter (
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return when(val propertyType = PropertyType.values()[viewType]) {
+        return when(PropertyType.values()[viewType]) {
             PropertyType.HighlightedProperty -> {
                 HighlightedPropertyViewHolder(
                         ItemHighlightPropertyBinding.inflate(
